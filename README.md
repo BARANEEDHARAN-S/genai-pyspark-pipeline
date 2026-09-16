@@ -71,6 +71,19 @@ results suitable for larger datasets as well as local testing.
 pytest
 ```
 
+## Compare Pandas and PySpark
+
+Benchmark loading, joining, revenue calculation, customer aggregation, and
+the top 10 result against the one-million-row orders dataset:
+
+```bash
+python benchmark_pandas_pyspark.py
+```
+
+The benchmark materializes each PySpark stage so the comparison includes the
+actual execution time for every operation. Results vary with local hardware,
+Java configuration, and whether Spark has already started.
+
 ## Configuration
 
 Override the default paths and record counts with environment variables:
